@@ -1,5 +1,5 @@
 // Создаём 404.html для SPA-фоллбэка на GitHub Pages
-import { copyFileSync } from 'node:fs';
+const { copyFileSync } = require('node:fs');
 try {
   copyFileSync('dist/index.html', 'dist/404.html');
   console.log('SPA fallback 404.html created');
