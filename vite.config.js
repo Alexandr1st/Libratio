@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Для GitHub Pages в проектном репо установи VITE_BASE="/reading-service-mvp/"
-  base: process.env.VITE_BASE || '/',
+  base: '/Libratio/', // <--- вот сюда нужно добавить эту строку
 });
