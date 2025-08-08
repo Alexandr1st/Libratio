@@ -31,7 +31,7 @@ jobs:
         run: npm run build
         env:
           # Если деплой в repo pages, укажи "/<repo-name>/"
-          VITE_BASE: "/reading-service-mvp/"
+          VITE_BASE: "/Libratio/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
