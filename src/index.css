@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Базовая тема */
+:root {
+  --bg: #f7f8fa;
+  --text: #1f2937;
+  --muted: #6b7280;
+}
+
+@layer base {
+  html, body {
+    @apply m-0 bg-[var(--bg)] text-[var(--text)];
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  }
+  a { @apply no-underline text-inherit; }
+}
+
+/* Переопределяем прежние классы через Tailwind */
+@layer components {
+  .container { @apply max-w-[980px] mx-auto p-4; }
+
+  nav { @apply flex items-center justify-between gap-4 py-3 mb-4; }
+  .nav-links a { @apply mr-3; }
+
+  .card { @apply bg-white border border-gray-200 rounded-xl p-4 mb-4 shadow-sm; }
+
+  .btn { @apply inline-flex items-center justify-center px-3 py-2 rounded-lg text-white bg-brand-primary hover:bg-blue-600 transition; }
+  .btn.secondary { @apply bg-indigo-50 text-gray-800 hover:bg-indigo-100; }
+  .btn.ghost { @apply bg-transparent text-brand-primary hover:bg-blue-50; }
+
+  .input, .select, .textarea { @apply w-full bg-white border border-gray-200 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-200; }
+
+  .row { @apply flex flex-wrap gap-3; }
+
+  .badge { @apply inline-flex items-center gap-1 px-2 py-1 rounded-full text-sm bg-indigo-100 text-slate-800; }
+
+  .muted { @apply text-gray-500; }
+
+  .list { @apply list-none pl-0 m-0; }
+
+  .progress-wrap { @apply w-full h-3 bg-gray-200 rounded-full overflow-hidden; }
+  .progress { @apply h-full bg-brand-primary; }
+}
