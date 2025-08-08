@@ -1,3 +1,4 @@
+import { useState } from 'react';
 // Создаем провайдер
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
